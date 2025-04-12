@@ -1,0 +1,348 @@
+/* Contenedor principal de secciones */
+.sections-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+}
+
+/*Contenedor de secciones*/
+.section-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    scroll-snap-align: start;
+    background-color: var(--bg-primary);
+}
+
+/*Contenedor de información de about*/
+.contenido-about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.texto-container {
+    flex: 1;
+    width: 45vw;
+    text-align: justify;
+    font-size: 1.1vw;
+}
+
+.imagen-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.imagen-container img {
+    margin: 20px;
+    height: 50vh;
+    width: auto;
+    box-shadow: 0 0 0 #494949;
+}
+.container-botones {
+    display: flex;
+    flex-direction: row;
+    width: 45vw;
+    
+}
+.container-botones button:hover {
+    transform: scale(1.1);
+}
+
+.boton-cv button {
+    width: 13vw;
+    height: 5vh;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: #ffffff;
+    font-size: 1vw;
+    font-weight: 400;
+    border-radius: 0.3vw;
+    margin: 10px;
+    font-size: 1.1vw;
+    color: black;
+}
+.boton-wp button {
+    width: 13vw;
+    height: 5vh;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: #25d366;
+    font-size: 1vw;
+    font-weight: 400;
+    border-radius: 0.3vw;
+    margin: 10px;
+    color: white;
+    font-size: 1.1vw;
+}
+
+/*Contenedor de experiencia*/
+.container-experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.cabecera-experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    font-size: 1.1vw;
+}
+
+.descripcion-experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.contenido-experience {
+    text-align: justify;
+    width: 100%;
+    font-size: 1.1vw;
+}
+/*Tarjetas de experiencia*/
+.tarjetas-experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tarjeta-experience {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.tarjeta-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.imagen-tarjeta {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tarjeta-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tarjeta-texto h2 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/* Estilos para la fecha */
+.tarjeta-fecha p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+    transition: color var(--transition-speed) ease;
+}
+
+.tarjeta-cuerpo {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-actividades {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.lista-actividades li {
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.lista-actividades b {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+.herramientas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+.herramientas p {
+    color: #666;
+    transition: color var(--transition-speed) ease;
+}
+.herramientas img {
+    height: 5vh;
+}
+
+.app {
+    min-height: 100vh;
+    transition: background-color var(--transition-speed) ease,
+                color var(--transition-speed) ease;
+}
+
+.app.light {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.app.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* Estilos para las secciones */
+section {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para los contenedores */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    background-color: var(--bg-primary);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Estilos para los títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    transition: color var(--transition-speed) ease;
+}
+
+/* Estilos para los párrafos */
+p {
+    color: #000000;
+    line-height: 1.6;
+    transition: color var(--transition-speed) ease;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--info-color);
+}
+
+/* Estilos para los botones */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease,
+                color var(--transition-speed) ease;
+}
+
+button:hover {
+    background-color: var(--info-color);
+}
+
+/* Ajustes específicos para cada sección */
+#about, #experience, #portfolio {
+    background-color: var(--bg-primary) !important;
+}
+
+/* Ajustes para el scroll suave */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--bg-primary);
+}
+
+/* Estilos específicos para las secciones */
+.texto-container p {
+    color: #000000;
+    font-size: 1.1vw;
+}
+
+.contenido-experience p {
+    color: #000000;
+    font-size: 1.1vw;
+}
+
+/* Ajustes para el tema oscuro */
+[data-theme="dark"] .texto-container p,
+[data-theme="dark"] .contenido-experience p,
+[data-theme="dark"] .tarjeta-fecha p,
+[data-theme="dark"] .herramientas p,
+[data-theme="dark"] .lista-actividades li {
+    color: #ffffff !important;
+}
