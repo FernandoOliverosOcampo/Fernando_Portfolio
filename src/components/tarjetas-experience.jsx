@@ -19,6 +19,24 @@ const TarjetasExperience = () => {
         fetchData()
     }, [])
     
+    // Función para normalizar las rutas de las imágenes
+    const normalizarRuta = (ruta) => {
+        ruta = ruta.trim();
+        
+        // Si ya es una URL completa o una ruta absoluta, la devolvemos como está
+        if (ruta.startsWith('http') || ruta.startsWith('/')) {
+            return ruta;
+        }
+        
+        // Si es una ruta que comienza con src/assets, la convertimos a /img/
+        if (ruta.includes('src/assets/img/')) {
+            return ruta.replace('src/assets/img/', '/img/');
+        }
+        
+        // Si es sólo el nombre del archivo, asumimos que está en /img/
+        return `/img/${ruta}`;
+    };
+    
     const settings = {
         dots: true,
         infinite: true,
@@ -53,7 +71,7 @@ const TarjetasExperience = () => {
                         </div>
                         <div className="leguajes-proyecto">
                             {project.imagenes.split(',').map((icono, index) => (
-                                <img key={index} src={icono.trim()} alt={`Tecnología ${index + 1}`} />
+                                <img key={index} src={normalizarRuta(icono)} alt={`Tecnología ${index + 1}`} />
                             ))}
                         </div>
                         <div className="descripcion-proyecto">

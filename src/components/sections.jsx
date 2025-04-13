@@ -46,7 +46,7 @@ const Sections = () => {
                     </div>
                     <div className="container-imagen">
                         <div className="imagen-container">
-                            <img src='../src/assets/img/imagen.webp' alt="about" />
+                            <img src='/img/imagen.webp' alt="about" />
                         </div>
                     </div>
                 </div>        
@@ -76,7 +76,7 @@ const Sections = () => {
                         <div className="tarjeta-title">
                             <div className="imagen-tarjeta">
                                 <div className="tarjeta-imagen">
-                                    <img src='../src/assets/img/alcaldia.png' alt="about" />
+                                    <img src='/img/alcaldia.png' alt="about" />
                                 </div>
                             </div>
                            
@@ -105,7 +105,7 @@ const Sections = () => {
                         <div className="tarjeta-title">
                             <div className="imagen-tarjeta">
                                 <div className="tarjeta-imagen">
-                                    <img src='../src/assets/img/equiti.webp' alt="about" />
+                                    <img src='/img/equiti.webp' alt="about" />
                                 </div>
                             </div>
                           
@@ -132,13 +132,13 @@ const Sections = () => {
                             <div className="herramientas">
                                 <p>Herramientas usadas:</p>
                                 <ul>
-                                    <img src='../src/assets/img/python.png' alt="about" />
-                                    <img src='../src/assets/img/flask.png' alt="about" />
-                                    <img src='../src/assets/img/html5.png' alt="about" />
-                                    <img src='../src/assets/img/css.png' alt="about" />
-                                    <img src='../src/assets/img/javascript.png' alt="about" />
-                                    <img src='../src/assets/img/sql.png' alt="about" />
-                                    <img src='../src/assets/img/supa.png' alt="about" />
+                                    <img src='/img/python.png' alt="about" />
+                                    <img src='/img/flask.png' alt="about" />
+                                    <img src='/img/html5.png' alt="about" />
+                                    <img src='/img/css.png' alt="about" />
+                                    <img src='/img/javascript.png' alt="about" />
+                                    <img src='/img/sql.png' alt="about" />
+                                    <img src='/img/supa.png' alt="about" />
                                 </ul>
                             </div>
                         </div>
