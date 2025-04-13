@@ -3,7 +3,7 @@ import Menu from './components/menu'
 import './App.css'
 import './styles/theme.css'
 import Sections from './components/sections'
-
+import Footer from './components/footer'
 function App() {
     const [theme, setTheme] = useState('light');
 
@@ -25,6 +25,7 @@ function App() {
         <div className={`app ${theme}`}>
             <Menu onThemeChange={toggleTheme} currentTheme={theme} />
             <Sections />
+            <Footer />
         </div>
     )
 }

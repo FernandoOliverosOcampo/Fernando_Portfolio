@@ -2,14 +2,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faFile } from '@fortawesome/free-solid-svg-icons'
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
-
+import { faFolder } from '@fortawesome/free-solid-svg-icons'
+import TarjetasExperience from './tarjetas-experience'
 const Sections = () => {
     const whatsappIcon = <FontAwesomeIcon icon={faWhatsapp} />
     const whatsappLink = "https://wa.me/573058290062"
     const cvLink = "https://drive.google.com/file/d/1BsbBF-ZZE5LNcSrSJBchi6B9hdbGZIg4/view?usp=sharing"
     const cvIcon = <FontAwesomeIcon icon={faFile} />
     const experienceIcon = <FontAwesomeIcon icon={faBriefcase} />
-
+    const portfolioIcon = <FontAwesomeIcon icon={faFolder} />
+    const masProyectos = "https://github.com/FernandoOliverosOcampo?tab=repositories"
     return (
         <div className="sections-wrapper">
             {/* Sección de about */}
@@ -55,10 +57,7 @@ const Sections = () => {
                 <div className="container-experience">
                     <div className="cabecera-experience">
                         <div className="titulo-experience">
-                            <h1> 
-                                {experienceIcon} 
-                                Experiencia laboral
-                            </h1>
+                            <h1>{experienceIcon} Experiencia laboral</h1>
                         </div>
                     </div>
                     <div className="descripcion-experience">
@@ -150,6 +149,20 @@ const Sections = () => {
             {/*Sección de proyectos*/}
             <section id="portfolio" className="section-container">
                 {/* Contenido del portafolio */}
+                <div className="container-portfolio">
+                    <div className="titulo-proyectos">
+                        <h2>{portfolioIcon} Proyectos</h2>
+                    </div>
+                    <div className="container-proyectos-slider">
+                        <TarjetasExperience /> 
+                    </div>
+                    <div className="ver-mas-proyectos">
+                        <a target="_blank" href={masProyectos}>
+                            <button>Ver más proyectos</button>
+                        </a>
+                    </div>
+                </div>
+              
             </section>
         </div>
     )
