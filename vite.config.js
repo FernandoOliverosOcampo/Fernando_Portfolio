@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['@fortawesome/react-fontawesome']
+      // Quitar la configuración externa para permitir que FontAwesome se incluya en el bundle
     }
   }
 })
