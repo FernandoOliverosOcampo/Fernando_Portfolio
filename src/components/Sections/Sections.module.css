@@ -1,0 +1,284 @@
+.sectionsWrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+}
+
+.sectionContainer {
+    width: 100%;
+    min-height: 70vh;
+    padding: 0;
+    margin: 0;
+    scroll-snap-align: start;
+    background-color: var(--bg-primary);
+    padding-top: 6rem;
+}
+
+.contenidoAbout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+}
+
+.containerInfo {
+    flex: 1;
+    max-width: 600px;
+}
+
+.textoContainer {
+    margin-bottom: 2rem;
+}
+
+.textoContainer p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.socialButtons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.socialButtons a {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialButtons a:hover {
+    transform: translateY(-3px);
+    color: var(--accent-color);
+}
+
+.containerBotones {
+    display: flex;
+    gap: 1rem;
+}
+
+.botonCv button,
+.botonWp button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.botonCv button {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.botonWp button {
+    background-color: #25D366;
+    color: white;
+}
+
+.botonCv button:hover,
+.botonWp button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imagenContainer {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.containerExperience {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cabeceraExperience {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.descripcionExperience {
+    margin-bottom: 2rem;
+}
+
+.contenidoExperience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tarjetasExperience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tarjetaExperience {
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjetaExperience:hover {
+    transform: translateY(-5px);
+}
+
+.tarjetaTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.imagenTarjeta {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.tarjetaImagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjetaTexto {
+    margin-bottom: 1rem;
+}
+
+.tarjetaFecha p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.tarjetaCuerpo {
+    margin-bottom: 1.5rem;
+}
+
+.listaActividades {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.listaActividades li {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.herramientas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.herramientas p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-tertiary);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.herramientas img {
+    width: 20px;
+    height: 20px;
+}
+
+.imagenSeccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .contenidoAbout {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .textoContainer p {
+        font-size: 1.2rem;
+    }
+
+    .imagenContainer {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contenidoAbout {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .containerInfo {
+        max-width: 100%;
+    }
+
+    .imagenContainer {
+        max-width: 300px;
+    }
+
+    .socialButtons {
+        justify-content: center;
+    }
+
+    .containerBotones {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contenidoAbout {
+        padding: 1rem;
+    }
+
+    .textoContainer p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .imagenContainer {
+        max-width: 250px;
+    }
+
+    .containerBotones {
+        flex-direction: column;
+    }
+
+    .botonCv button,
+    .botonWp button {
+        width: 100%;
+    }
+} 

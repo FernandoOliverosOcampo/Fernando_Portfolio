@@ -1,0 +1,177 @@
+.tarjetasExperience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.tarjetaExperience {
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjetaExperience:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imagenTarjeta {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.imagenTarjeta img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.tarjetaTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.tarjetaFecha {
+    margin-bottom: 1.5rem;
+}
+
+.tarjetaFecha p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.listaActividades {
+    margin-bottom: 1.5rem;
+}
+
+.actividadItem {
+    margin-bottom: 1.5rem;
+}
+
+.actividadItem:last-child {
+    margin-bottom: 0;
+}
+
+.actividadItem h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.actividadItem p {
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.herramientasTitulo {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.herramientas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: auto;
+}
+
+.herramientas p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-tertiary);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    transition: transform 0.2s ease;
+}
+
+.herramientas p:hover {
+    transform: translateY(-2px);
+}
+
+.herramientas img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .tarjetasExperience {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .tarjetaExperience {
+        padding: 1.2rem;
+    }
+    
+    .imagenTarjeta {
+        height: 60px;
+    }
+    
+    .actividadItem h4 {
+        font-size: 1rem;
+    }
+    
+    .actividadItem p {
+        font-size: 0.9rem;
+    }
+    
+    .herramientas {
+        gap: 0.6rem;
+    }
+    
+    .herramientas p {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .tarjetasExperience {
+        padding: 0.5rem;
+    }
+    
+    .imagenTarjeta {
+        height: 50px;
+    }
+    
+    .tarjetaTitle {
+        font-size: 1.3rem;
+    }
+    
+    .actividadItem h4 {
+        font-size: 0.95rem;
+    }
+    
+    .actividadItem p {
+        font-size: 0.85rem;
+    }
+    
+    .herramientas p {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    .herramientas img {
+        width: 16px;
+        height: 16px;
+    }
+} 

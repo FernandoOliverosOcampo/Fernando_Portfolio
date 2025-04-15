@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import Menu from './components/menu'
-import './App.css'
+import Menu from './components/Menu/Menu'
 import './styles/theme.css'
-import Sections from './components/sections'
-import Footer from './components/footer'
+import Sections from './components/Sections/Sections'
+import Footer from './components/Footer/Footer'
+
 function App() {
     const [theme, setTheme] = useState('light');
 

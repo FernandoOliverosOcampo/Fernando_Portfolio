@@ -1,0 +1,32 @@
+.footerContainer {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footerContainer p {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footerContainer {
+        padding: 1.5rem;
+    }
+    
+    .footerContainer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footerContainer {
+        padding: 1rem;
+    }
+    
+    .footerContainer p {
+        font-size: 0.8rem;
+    }
+} 

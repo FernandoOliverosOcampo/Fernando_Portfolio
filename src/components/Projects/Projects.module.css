@@ -1,0 +1,295 @@
+.projectsContainer {
+    width: 100%;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projectTitle {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.projectCard {
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projectName {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.techStack {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.techIcon {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.techIcon:hover {
+    transform: scale(1.1);
+}
+
+.projectDescription {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.projectLinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.githubLink {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.githubLink:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+/* Dots navigation */
+.dotsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--text-secondary);
+    transition: background-color 0.3s ease;
+}
+
+.dotActive {
+    background-color: var(--accent-color);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .projectsContainer {
+        padding: 1rem;
+    }
+
+    .projectTitle {
+        font-size: 2rem;
+    }
+
+    .projectName {
+        font-size: 1.5rem;
+    }
+
+    .projectDescription {
+        font-size: 1rem;
+    }
+
+    .techStack {
+        gap: 0.8rem;
+    }
+
+    .techIcon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .projectLinks {
+        flex-direction: column;
+    }
+
+    .githubLink {
+        text-align: center;
+    }
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tarjeta-proyectos {
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-proyecto h2 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.leguajes-proyecto {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.leguajes-proyecto img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+.leguajes-proyecto img:hover {
+    transform: scale(1.1);
+}
+
+.descripcion-proyecto p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.button-proyecto {
+    display: flex;
+    gap: 1rem;
+}
+
+.button-proyecto button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-proyecto button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Estilos para el slider */
+:global(.slick-slide) {
+    padding: 1rem;
+}
+
+:global(.slick-dots) {
+    bottom: -40px;
+}
+
+:global(.slick-dots li button:before) {
+    color: var(--text-secondary);
+    opacity: 0.5;
+    font-size: 8px;
+}
+
+:global(.slick-dots li.slick-active button:before) {
+    color: var(--accent-color);
+    opacity: 1;
+}
+
+:global(.slick-prev),
+:global(.slick-next) {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+:global(.slick-prev:before),
+:global(.slick-next:before) {
+    font-size: 40px;
+    opacity: 0.8;
+    color: #007bff !important;
+}
+
+:global(.slick-prev) {
+    left: -50px;
+}
+
+:global(.slick-next) {
+    right: -50px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .slider-container {
+        padding: 1rem;
+    }
+
+    .titulo-proyecto h2 {
+        font-size: 1.5rem;
+    }
+
+    .descripcion-proyecto p {
+        font-size: 1rem;
+    }
+
+    .leguajes-proyecto {
+        gap: 0.8rem;
+    }
+
+    .leguajes-proyecto img {
+        width: 40px;
+        height: 40px;
+    }
+
+    :global(.slick-prev),
+    :global(.slick-next) {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .button-proyecto {
+        flex-direction: column;
+    }
+
+    .button-proyecto button {
+        width: 100%;
+    }
+
+    .tarjeta-proyectos {
+        padding: 1.5rem;
+    }
+} 

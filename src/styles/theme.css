@@ -1,4 +1,13 @@
 :root {
+    /* Colores principales */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary: #e0e0e0;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-color: #007bff;
+    --border-color: #dddddd;
+    
     /* Colores base */
     --primary-color: #007bff;
     --secondary-color: #6c757d;
@@ -8,13 +17,9 @@
     --info-color: #17a2b8;
     
     /* Colores de texto */
-    --text-primary: #333;
-    --text-secondary: #6c757d;
     --text-light: #f8f9fa;
     
     /* Colores de fondo */
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8f9fa;
     --bg-dark: #343a40;
     
     /* Sombras */
@@ -27,6 +32,14 @@
 }
 
 [data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #3d3d3d;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --accent-color: #4dabf7;
+    --border-color: #444444;
+    
     /* Colores base */
     --primary-color: #0d6efd;
     --secondary-color: #6c757d;
@@ -36,13 +49,9 @@
     --info-color: #0dcaf0;
     
     /* Colores de texto */
-    --text-primary: #f8f9fa;
-    --text-secondary: #adb5bd;
     --text-light: #f8f9fa;
     
     /* Colores de fondo */
-    --bg-primary: #212529;
-    --bg-secondary: #212529;
     --bg-dark: #1a1d20;
     
     /* Sombras */
@@ -51,10 +60,18 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos base para el tema oscuro */
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: var(--bg-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     color: var(--text-primary);
+    background-color: var(--bg-primary);
     transition: background-color var(--transition-speed) ease,
                 color var(--transition-speed) ease;
 }
@@ -79,7 +96,8 @@ section {
 
 /* Estilos para enlaces */
 a {
-    color: var(--primary-color);
+    text-decoration: none;
+    color: var(--accent-color);
     transition: color var(--transition-speed) ease;
 }
 
@@ -89,12 +107,13 @@ a:hover {
 
 /* Estilos para botones */
 button {
+    cursor: pointer;
+    border: none;
+    outline: none;
     background-color: var(--primary-color);
     color: var(--text-light);
-    border: none;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
-    cursor: pointer;
     transition: background-color var(--transition-speed) ease,
                 color var(--transition-speed) ease;
 }
