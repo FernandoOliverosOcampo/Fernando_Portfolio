@@ -4,10 +4,9 @@ import TarjetasExperience from '../TarjetasExperience/TarjetasExperience';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Projects from '../Projects/Projects';
-
+import {linKedin, masProyectos, github, whatsapp, cv} from '../../../constants.js'
 
 const Sections = () => {
-    const masProyectos = "https://github.com/FernandoOliverosOcampo?tab=repositories"
 
     return (
         <div className={styles.sectionsWrapper}>
@@ -23,10 +22,14 @@ const Sections = () => {
                         </div>
                         <div className={styles.containerBotones}>
                             <div className={styles.botonCv}>
-                                <button>Descargar CV</button>
+                                <a href={cv} target="_blank" rel="noopener noreferrer" aria-label="CV">
+                                    <button>Descargar CV</button>
+                                </a>
                             </div>
                             <div className={styles.botonWp}>
-                                <button>Contactar por WhatsApp</button>
+                                <a href={whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                    <button>Contactar por WhatsApp</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -35,10 +38,10 @@ const Sections = () => {
                             <img src="/img/imagen.webp" alt="Fernando Oliveros" />
                         </div>
                         <div className={styles.socialButtons}>
-                            <a href="https://github.com/FernandoOliverosOcampo?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <a href={github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                 <FontAwesomeIcon icon={faGithub} />
                             </a>
-                            <a href="https://www.linkedin.com/in/feroliverdev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <a href={linKedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <FontAwesomeIcon icon={faLinkedin} />
                             </a>
                         </div>
