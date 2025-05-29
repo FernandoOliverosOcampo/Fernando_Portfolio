@@ -152,16 +152,35 @@
 .tarjeta-proyectos {
     background-color: var(--bg-secondary);
     border-radius: 15px;
-    padding: 1.5rem;
-    margin: 1rem;
+    padding: 1rem;
+    margin: 0.7rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: auto;
-    display: flex;
-    flex-direction: column;
+    width: 290px;           /* Más compacto pero suficiente */
+ 
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0.7rem;
 }
 
+/* Assign each child to a grid row */
 .titulo-proyecto {
-    flex-shrink: 0;
+    grid-row: 1;
+}
+
+.leguajes-proyecto {
+    grid-row: 2;
+}
+
+.descripcion-proyecto {
+    grid-row: 3;
+   
+    overflow: unset;        /* Sin scroll */
+    display: flex;
+    align-items: flex-start;
+}
+
+.button-proyecto {
+    grid-row: 4;
 }
 
 .titulo-proyecto h2 {
@@ -192,6 +211,7 @@
 
 .descripcion-proyecto {
     flex-grow: 1;
+    /* height: 10dvh; */
 }
 
 .descripcion-proyecto p {
@@ -327,4 +347,4 @@
         width: 35px;
         height: 35px;
     }
-} 
+}
