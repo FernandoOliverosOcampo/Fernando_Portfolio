@@ -81,6 +81,12 @@
     margin-bottom: 0.25rem;
 }
 
+.cargo {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
 .fecha {
     display: inline-flex;
     align-items: center;

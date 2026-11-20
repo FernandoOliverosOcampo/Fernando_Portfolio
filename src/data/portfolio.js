@@ -64,6 +64,36 @@ export const habilidades = [
 
 export const experiencias = [
     {
+        id: 3,
+        empresa: 'Institución Educativa Maruja del Rosario Aguilar',
+        cargo: 'Ingeniero de Sistemas – Área de Soporte',
+        fecha: 'Mar 2024 — Abr 2025',
+        actividades: [
+            {
+                titulo: 'Plataformas institucionales',
+                descripcion: 'Administración y soporte de plataformas institucionales, gestión y soporte técnico en la plataforma SIMAT, y manejo y soporte en la plataforma EVI.'
+            },
+            {
+                titulo: 'Página web institucional',
+                descripcion: 'Creación y mantenimiento de la página web institucional.'
+            },
+            {
+                titulo: 'Infraestructura tecnológica y equipos',
+                descripcion: 'Soporte en infraestructura tecnológica y redes de la institución, mantenimiento preventivo y correctivo de equipos de cómputo, y gestión documental digital y respaldo de información.'
+            },
+            {
+                titulo: 'Asistencia técnica',
+                descripcion: 'Asistencia técnica a docentes, estudiantes y personal administrativo.'
+            }
+        ],
+        herramientas: [
+            { nombre: 'React', icono: '/img/react.png' },
+            { nombre: 'CSS', icono: '/img/css.png' },
+            { nombre: 'JavaScript', icono: '/img/javascript.png' }
+        ],
+        imagen: '/img/maruja.webp'
+    },
+    {
         id: 1,
         empresa: 'Equiti - Findii',
         fecha: 'Nov 2023 — Feb 2024',

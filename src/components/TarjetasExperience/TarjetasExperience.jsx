@@ -17,6 +17,7 @@ const TarjetasExperience = () => (
                             </div>
                             <div>
                                 <h3 className={styles.empresa}>{experiencia.empresa}</h3>
+                                {experiencia.cargo && <p className={styles.cargo}>{experiencia.cargo}</p>}
                                 <p className={styles.fecha}>
                                     <FontAwesomeIcon icon={faCalendarDays} /> {experiencia.fecha}
                                 </p>
