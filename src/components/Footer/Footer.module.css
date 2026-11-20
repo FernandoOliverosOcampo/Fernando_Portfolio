@@ -1,32 +1,115 @@
-.footerContainer {
-    background-color: var(--bg-secondary);
-    padding: 2rem;
-    text-align: center;
-    margin-top: 2rem;
+.footer {
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-elevated);
+    padding-top: 3rem;
 }
 
-.footerContainer p {
-    color: var(--text-primary);
-    font-size: 1rem;
-    margin: 0;
+.footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
 }
 
-@media screen and (max-width: 768px) {
-    .footerContainer {
-        padding: 1.5rem;
-    }
-    
-    .footerContainer p {
-        font-size: 0.9rem;
-    }
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
 }
 
-@media screen and (max-width: 576px) {
-    .footerContainer {
-        padding: 1rem;
+.logoMark {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--gradient);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+}
+
+.links a {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.links a:hover {
+    color: var(--accent);
+}
+
+.socials {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.socials a {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--bg-soft);
+    color: var(--text-muted);
+    transition: color var(--transition), transform var(--transition);
+}
+
+.socials a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.toTop {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-weight: 500;
+}
+
+.toTop:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 760px) {
+    .footerContent,
+    .bottom {
+        flex-direction: column;
+        text-align: center;
     }
-    
-    .footerContainer p {
-        font-size: 0.8rem;
+
+    .links {
+        justify-content: center;
     }
-} 
+}
