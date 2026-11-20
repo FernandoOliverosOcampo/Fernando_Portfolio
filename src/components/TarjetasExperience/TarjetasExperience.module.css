@@ -1,177 +1,152 @@
-.tarjetasExperience {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.timeline {
+    position: relative;
+    list-style: none;
+    max-width: 880px;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.6rem;
+    width: 2px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+.timelineItem {
+    position: relative;
+}
+
+.timelineItem + .timelineItem {
+    margin-top: 2rem;
+}
+
+.dot {
+    position: absolute;
+    top: 2rem;
+    left: calc(-2.5rem + 0.6rem - 8px);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--bg);
+    border: 4px solid var(--accent);
+    box-shadow: 0 0 0 5px var(--accent-soft);
+}
+
+.card {
     padding: 2rem;
+    border-radius: var(--radius);
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), border-color var(--transition);
 }
 
-.tarjetaExperience {
-    background-color: var(--bg-secondary);
-    border-radius: 15px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
+.card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-soft);
 }
 
-.tarjetaExperience:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.imagenTarjeta {
-    width: 100%;
-    height: 60px;
-    margin-bottom: 1.5rem;
+.cardHeader {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.imagenTarjeta img {
+.logo {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
+    border-radius: 14px;
+    background-color: #fff;
+    border: 1px solid var(--border);
+}
+
+.logo img {
+    width: 100%;
     height: 100%;
-    width: auto;
     object-fit: contain;
 }
 
-.tarjetaTitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
+.empresa {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
 }
 
-.tarjetaFecha {
-    margin-bottom: 1.5rem;
+.fecha {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
 }
 
-.tarjetaFecha p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+.actividades {
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
 }
 
-.listaActividades {
-    margin-bottom: 1.5rem;
+.actividades li {
+    padding-left: 1rem;
+    border-left: 2px solid var(--border);
 }
 
-.actividadItem {
-    margin-bottom: 1.5rem;
+.actividades h4 {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
 }
 
-.actividadItem:last-child {
-    margin-bottom: 0;
-}
-
-.actividadItem h4 {
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.actividadItem p {
-    color: var(--text-primary);
-    line-height: 1.6;
+.actividades p {
+    color: var(--text-muted);
     font-size: 0.95rem;
-}
-
-.herramientasTitulo {
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    font-weight: 600;
 }
 
 .herramientas {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: auto;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
 }
 
-.herramientas p {
-    display: flex;
+.tag {
+    display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--bg-tertiary);
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: var(--text-primary);
-    transition: transform 0.2s ease;
+    gap: 0.45rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background-color: var(--bg-soft);
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
-.herramientas p:hover {
-    transform: translateY(-2px);
-}
-
-.herramientas img {
-    width: 20px;
-    height: 20px;
+.tag img {
+    width: 16px;
+    height: 16px;
     object-fit: contain;
 }
 
-@media screen and (max-width: 768px) {
-    .tarjetasExperience {
-        grid-template-columns: 1fr;
-        padding: 1rem;
+@media (max-width: 560px) {
+    .timeline {
+        padding-left: 1.75rem;
     }
-    
-    .tarjetaExperience {
-        padding: 1.2rem;
+
+    .dot {
+        left: calc(-1.75rem + 0.6rem - 8px);
     }
-    
-    .imagenTarjeta {
-        height: 60px;
-    }
-    
-    .actividadItem h4 {
-        font-size: 1rem;
-    }
-    
-    .actividadItem p {
-        font-size: 0.9rem;
-    }
-    
-    .herramientas {
-        gap: 0.6rem;
-    }
-    
-    .herramientas p {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.85rem;
+
+    .card {
+        padding: 1.5rem;
     }
 }
-
-@media screen and (max-width: 576px) {
-    .tarjetasExperience {
-        padding: 0.5rem;
-    }
-    
-    .imagenTarjeta {
-        height: 50px;
-    }
-    
-    .tarjetaTitle {
-        font-size: 1.3rem;
-    }
-    
-    .actividadItem h4 {
-        font-size: 0.95rem;
-    }
-    
-    .actividadItem p {
-        font-size: 0.85rem;
-    }
-    
-    .herramientas p {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.8rem;
-    }
-    
-    .herramientas img {
-        width: 16px;
-        height: 16px;
-    }
-} 
