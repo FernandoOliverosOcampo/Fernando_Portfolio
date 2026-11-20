@@ -176,7 +176,6 @@
     box-shadow: var(--shadow-md);
     font-size: 0.85rem;
     font-weight: 600;
-    animation: floatSoft 20s ease-in-out infinite;
 }
 
 .chip img {
@@ -193,13 +192,11 @@
 .chipRight {
     top: 46%;
     right: -14%;
-    animation-delay: -7s;
 }
 
 .chipBottom {
     bottom: 4%;
     left: 2%;
-    animation-delay: -14s;
 }
 
 .scrollHint {
@@ -229,11 +226,6 @@
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-14px); }
-}
-
-@keyframes floatSoft {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
 }
 
 @keyframes fadeUp {
